@@ -1,0 +1,160 @@
+/* Variable Tema Warna Gelap */
+:root {
+    --primary-blue: #3a86ff; /* Biru yang lebih cerah untuk kontras */
+    --body-bg: #121212; /* Latar belakang utama, hitam pekat */
+    --section-bg: #1e1e1e; /* Latar belakang section, sedikit lebih terang */
+    --navbar-bg: #0d1b2a; /* Biru sangat gelap untuk navbar */
+    --footer-bg: #0d1b2a; /* Warna yang sama dengan navbar untuk konsistensi */
+    --text-light: #e0e0e0; /* Teks utama, abu-abu terang */
+    --text-secondary: #a0a0a0; /* Teks sekunder yang lebih redup */
+    --border-color: #444;
+}
+
+/* Pengaturan Dasar */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-light);
+    /* Memberi jarak antara navbar dan konten */
+    padding-top: 80px; 
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Merriweather', serif;
+    color: var(--text-light);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar .nav-link {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: var(--text-light);
+}
+
+.navbar-brand {
+    color: var(--text-light) !important;
+}
+
+/* Hero Section */
+#hero {
+    height: calc(100vh - 80px); /* Menyesuaikan tinggi dengan padding body */
+    color: var(--text-light);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://tugaskuliah.site/nusantara.png?q=80&w=1974&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+}
+
+#hero h1 {
+    font-weight: 700;
+}
+
+/* Konten Utama & Sections */
+section {
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-blue);
+}
+
+/* Tabel */
+.table {
+    --bs-table-bg: var(--section-bg);
+    --bs-table-color: var(--text-light);
+    --bs-table-border-color: var(--border-color);
+    --bs-table-hover-bg: #2a2a2a;
+    --bs-table-hover-color: var(--text-light);
+}
+
+.table thead {
+    background-color: var(--navbar-bg) !important;
+    color: var(--text-light);
+}
+
+/* List */
+.list-group-item {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
+ul.ps-4 li {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Formulir */
+.form-label {
+    color: var(--text-secondary);
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+
+.form-control:focus {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(58, 134, 255, 0.25);
+}
+
+/* Tombol */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Audio Player */
+audio {
+    filter: invert(1) sepia(1) saturate(0) hue-rotate(0deg);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    padding: 1.5rem 0;
+    color: var(--text-secondary);
+}
